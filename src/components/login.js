@@ -1,5 +1,5 @@
 import React , { useState, useRef }from "react";
-import { Navigate, useNavigate  } from 'react-router-dom';
+import { Navigate  } from 'react-router-dom';
 
 import { useDispatch, useSelector } from "react-redux";
 import Form from "react-validation/build/form";
@@ -21,8 +21,8 @@ const required = (value) => {
 
   
 
-function Login(props) {
-  let navigate = useNavigate();
+function Login() {
+  //let navigate = useNavigate();
   const form = useRef();
   const checkBtn = useRef();
   const [username, setUsername] = useState("");
@@ -105,7 +105,12 @@ function Login(props) {
                     <a href="#!">Forgot password?</a>
                     </div>
                     </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary btn-block" disabled={loading}>
+                      {loading && (
+                        <span className="spinner-border spinner-border-sm"></span>
+                      )}
+                      <span>Login</span>
+                    </button>
                     {message && (
                       <div className="form-group">
                         <div className="alert alert-danger" role="alert">
