@@ -44,7 +44,9 @@ function App() {
           </Link>
         </li>
 
-        
+       {currentUser !== null && (
+        <li className="navbar-brand">{currentUser.email}</li> 
+       )}
 
       </div>
 
@@ -67,6 +69,7 @@ function App() {
 
       
     </nav>
+    
 
     <div className="container mt-3">
       <Routes>
