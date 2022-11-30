@@ -1,7 +1,7 @@
 import React , { useEffect }from "react";
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-//import { posts} from "../actions/posts";
+import { posts} from "../actions/posts";
 //import UserService from "../services/user.service";
 
   
