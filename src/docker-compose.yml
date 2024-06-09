@@ -6,11 +6,11 @@ services:
     ports:
       - '5800:5800'
     depends_on:
-      -mongo
+      -db
   mongo:
     container_name: mongo
     image: mongo:5
     volumes:
       - ./data:/data/db
     ports:
-      - '27017:27017'        
+      - '27017:27017'      
